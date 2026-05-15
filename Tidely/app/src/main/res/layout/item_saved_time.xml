@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/bg_saved_time_box"
+    android:paddingStart="15dp"
+    android:paddingEnd="10dp">
+
+    <!-- The Time Text -->
+    <TextView
+        android:id="@+id/tv_final_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:fontFamily="monospace"
+        android:text="08 : 30 AM"
+        android:textColor="#FFFFFFFF"
+        android:textSize="26sp" />
+
+    <!-- The NEW Delete Button (Subtle grey/white 'X') -->
+    <TextView
+        android:id="@+id/btn_delete_time"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="✕"
+        android:textColor="#80FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- The Switch (Moved slightly left to make room for the X) -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_final_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/btn_delete_time"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:checked="true"
+        app:thumbTint="@color/switch_thumb_blue"
+        app:trackTint="@color/switch_track_blue" />
+
+</RelativeLayout>

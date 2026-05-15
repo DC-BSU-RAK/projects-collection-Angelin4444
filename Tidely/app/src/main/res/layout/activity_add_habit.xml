@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC6E4F6">
+
+    <!-- Huge padding added here so the back button is super easy to click -->
+    <TextView
+        android:id="@+id/btn_back_add_habit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:text="◀"
+        android:textColor="#FF003366"
+        android:textSize="32sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_back_add_habit"
+        android:background="@drawable/bg_add_habit_container"
+        android:padding="30dp">
+
+        <EditText
+            android:id="@+id/et_habit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="Add your habits"
+            android:textColor="#FFFFFFFF"
+            android:textColorHint="#CCFFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/row_daily_goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_habit_name"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_habit_label_pill"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="Daily Goal"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_minus_goal"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="#FF000000"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_goal_count"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_habit_input_box"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#FF000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btn_plus_goal"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="#FF000000"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/row_frequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row_daily_goal"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_habit_label_pill"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="Frequency"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_frequency_result"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/bg_habit_input_box"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:minWidth="70dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="#FF000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_customize_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row_frequency"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="monospace"
+            android:text="Customize the Days"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/row_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_customize_days"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_habit_label_pill"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="Time"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_customize_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row_time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="monospace"
+            android:text="Customize the time"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/row_remind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_customize_time"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_habit_label_pill"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="Remind Me.."
+                android:textColor="#FFFFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:scaleX="1.3"
+                android:scaleY="1.3"
+                app:thumbTint="@color/switch_thumb_blue"
+                app:trackTint="@color/switch_track_blue" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btn_save_habit"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_habit_label_pill"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="Save"
+            android:textColor="#FFFFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>

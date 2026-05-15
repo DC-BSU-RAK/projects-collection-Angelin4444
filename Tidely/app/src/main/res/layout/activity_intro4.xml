@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bear_background_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bear_frame_4" />
+
+    <ImageView
+        android:id="@+id/text_login_intro_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/text_already_account" />
+
+    <ImageView
+        android:id="@+id/btn_get_started_intro_4"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_login_intro_4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/btn_get_started" />
+
+    <ImageView
+        android:id="@+id/btn_back_intro_4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/ic_back_arrow" />
+
+</RelativeLayout>

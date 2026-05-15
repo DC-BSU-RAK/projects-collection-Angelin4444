@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+
+    <item android:drawable="@drawable/wave_1" android:duration="200" />
+    <item android:drawable="@drawable/wave_2" android:duration="200" />
+    <item android:drawable="@drawable/wave_3" android:duration="200" />
+    <item android:drawable="@drawable/wave_4" android:duration="200" />
+    <item android:drawable="@drawable/wave_5" android:duration="200" />
+    <item android:drawable="@drawable/wave_6" android:duration="200" />
+    <item android:drawable="@drawable/wave_7" android:duration="200" />
+    <item android:drawable="@drawable/wave_8" android:duration="200" />
+    <item android:drawable="@drawable/wave_9" android:duration="200" />
+    <item android:drawable="@drawable/wave_10" android:duration="200" />
+    <item android:drawable="@drawable/wave_11" android:duration="200" />
+    <item android:drawable="@drawable/splash_final" android:duration="1500" />
+
+</animation-list>

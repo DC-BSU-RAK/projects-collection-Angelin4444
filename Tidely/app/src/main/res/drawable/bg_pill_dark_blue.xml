@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Dark blue background to match your theme -->
+    <solid android:color="#004E8A" />
+    <!-- White border as seen in the image -->
+    <stroke android:width="2dp" android:color="#FFFFFF"/>
+    <!-- Large radius for full pill effect -->
+    <corners android:radius="25dp" />
+</shape>
