@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The main box holding everything together. A background image sets the vibe right away. -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".MainActivity">
+
+    <!-- A little button in the top left corner. Clicking it shows the intro popup. -->
+    <ImageView
+        android:id="@+id/btnInfo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:elevation="2dp"
+        android:src="@drawable/ic_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- This scrollable area holds all the scent options. The user can scroll up or down. -->
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnMix"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- A grid holding six different cards. Each card has a specific flavor picture plus a tiny heart icon. -->
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false">
+
+                <!-- Card one! -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/card1" android:layout_width="140dp" android:layout_height="180dp" android:layout_margin="10dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="12dp" app:cardElevation="4dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="8dp">
+                        <ImageView android:id="@+id/img1" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:scaleType="centerCrop" android:src="@drawable/flavor_1"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_gravity="center_horizontal" android:layout_marginTop="6dp" android:src="@drawable/icon_heart"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Card two! -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/card2" android:layout_width="140dp" android:layout_height="180dp" android:layout_margin="10dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="12dp" app:cardElevation="4dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="8dp">
+                        <ImageView android:id="@+id/img2" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:scaleType="centerCrop" android:src="@drawable/flavor_2"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_gravity="center_horizontal" android:layout_marginTop="6dp" android:src="@drawable/icon_heart"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Card three! -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/card3" android:layout_width="140dp" android:layout_height="180dp" android:layout_margin="10dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="12dp" app:cardElevation="4dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="8dp">
+                        <ImageView android:id="@+id/img3" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:scaleType="centerCrop" android:src="@drawable/flavor_3"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_gravity="center_horizontal" android:layout_marginTop="6dp" android:src="@drawable/icon_heart"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Card four! -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/card4" android:layout_width="140dp" android:layout_height="180dp" android:layout_margin="10dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="12dp" app:cardElevation="4dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="8dp">
+                        <ImageView android:id="@+id/img4" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:scaleType="centerCrop" android:src="@drawable/flavor_4"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_gravity="center_horizontal" android:layout_marginTop="6dp" android:src="@drawable/icon_heart"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Card five! -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/card5" android:layout_width="140dp" android:layout_height="180dp" android:layout_margin="10dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="12dp" app:cardElevation="4dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="8dp">
+                        <ImageView android:id="@+id/img5" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:scaleType="centerCrop" android:src="@drawable/flavor_5"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_gravity="center_horizontal" android:layout_marginTop="6dp" android:src="@drawable/icon_heart"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Card six! -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/card6" android:layout_width="140dp" android:layout_height="180dp" android:layout_margin="10dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="12dp" app:cardElevation="4dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="8dp">
+                        <ImageView android:id="@+id/img6" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:scaleType="centerCrop" android:src="@drawable/flavor_6"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_gravity="center_horizontal" android:layout_marginTop="6dp" android:src="@drawable/icon_heart"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </GridLayout>
+
+            <!-- Below the grid, this row shows the chosen flavors. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Empty slot number one. Starts invisible. -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/bottomCard1" android:layout_width="120dp" android:layout_height="150dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="12dp" app:cardElevation="4dp" android:visibility="invisible">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="6dp">
+                        <ImageView android:id="@+id/bottomImg1" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:scaleType="centerCrop" />
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:layout_gravity="center_horizontal" android:layout_marginTop="4dp" android:src="@drawable/icon_heart"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- A cute little plus sign in the middle. -->
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:src="@drawable/icon_plus" />
+
+                <!-- Empty slot number two. Starts invisible. -->
+                <com.google.android.material.card.MaterialCardView android:id="@+id/bottomCard2" android:layout_width="120dp" android:layout_height="150dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="12dp" app:cardElevation="4dp" android:visibility="invisible">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="6dp">
+                        <ImageView android:id="@+id/bottomImg2" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:scaleType="centerCrop" />
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:layout_gravity="center_horizontal" android:layout_marginTop="4dp" android:src="@drawable/icon_heart"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- The big mix button pinned to the bottom. It starts slightly faded out because nothing is selected yet. -->
+    <ImageView
+        android:id="@+id/btnMix"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="32dp"
+        android:alpha="0.5"
+        android:scaleType="fitCenter"
+        android:src="@drawable/btn_mix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- A dark transparent overlay that covers the whole screen when a popup is active. -->
+    <FrameLayout
+        android:id="@+id/popupOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3000000"
+        android:visibility="gone"
+        android:elevation="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- The actual popup box. It holds an image background plus a clickable button inside. -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imgPopupBg"
+                android:layout_width="320dp"
+                android:layout_height="480dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/popup_intro"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/btnPopupAction"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="35dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_next"
+                app:layout_constraintBottom_toBottomOf="@+id/imgPopupBg"
+                app:layout_constraintStart_toStartOf="@+id/imgPopupBg"
+                app:layout_constraintEnd_toEndOf="@+id/imgPopupBg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <!-- A floating circle button at the bottom right. Clicking it controls the background music. It starts hidden. -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSoundControl"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        android:elevation="12dp"
+        app:cardBackgroundColor="#CCFFFFFF"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imgSoundControl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_sound_play" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
